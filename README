@@ -1,0 +1,6 @@
+This PHP class implements IoC (Inversion of Control) principle
+to resolve dependencies between classes and acheive loose coupling.
+IoC is implemented using dependency constructor injection.
+Dependencies should be defined in configuration file
+
+Copyright (C) 2012  Mark Rolich
