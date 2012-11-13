@@ -20,63 +20,63 @@ class IOC
     */
     private $data;
 
-	/**
-	* Constructor
+    /**
+    * Constructor
     *
-	* @param $config mixed - IOC configuration (array)
-	*/
+    * @param $config mixed - IOC configuration (array)
+    */
     public function __construct($config)
     {
         $this->config = $config;
     }
 
-	/**
-	* Getter
+    /**
+    * Getter
     * Picks up object with provided class name
     * from objects storage
     *
-	* @param $name string - class name
-	* @return mixed - object picked up from objects storage
-	*/
+    * @param $name string - class name
+    * @return mixed - object picked up from objects storage
+    */
     public function __get($name)
     {
         return $this->data[$name];
     }
 
-	/**
-	* Setter
+    /**
+    * Setter
     * Places object with provided class name
     * in objects storage
     *
-	* @param $name string - class name
-	* @param $value mixed - class instance to add to objects storage
-	*/
+    * @param $name string - class name
+    * @param $value mixed - class instance to add to objects storage
+    */
     public function __set($name, $value)
     {
         $this->data[$name] = $value;
     }
 
-	/**
-	* Check if object with provided class name
+    /**
+    * Check if object with provided class name
     * exists in objects storage
     *
-	* @param $name string - class name
-	* @return bool
-	*/
+    * @param $name string - class name
+    * @return bool
+    */
     public function __isset($name)
     {
         return isset($this->data[$name]);
     }
 
-	/**
-	* Recursively traverses configuration array,
+    /**
+    * Recursively traverses configuration array,
     * instantiates classes with provided dependencies
     * or picks up already instantiated classes from objects storage,
     * injecting additional arguments to classes constructors if provided
     *
-	* @param $className string - class name
-	* @return mixed - class instance (initialized or picked up from objects storage)
-	*/
+    * @param $className string - class name
+    * @return mixed - class instance (initialized or picked up from objects storage)
+    */
     public function resolve($className)
     {
         $instance = null;

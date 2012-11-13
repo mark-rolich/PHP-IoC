@@ -5,12 +5,12 @@
 */
 class DB
 {
-	/**
-	* Constructor
-	*
- 	* @param $config mixed - Config object
- 	* @param $log mixed - Log object
-	*/
+    /**
+    * Constructor
+    *
+    * @param $config mixed - Config object
+    * @param $log mixed - Log object
+    */
     public function __construct(Config $config, Log $log)
     {
         $host   = $config->dbname;
@@ -21,11 +21,11 @@ class DB
         $log->track();
     }
 
-	/**
-	* Stub DB query method
-	*
- 	* @param $id int - record id
-	*/
+    /**
+    * Stub DB query method
+    *
+    * @param $id int - record id
+    */
     public function query($id)
     {
         return 'Loaded user with id: ' . $id . '<br>';

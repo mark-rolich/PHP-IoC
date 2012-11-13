@@ -25,12 +25,12 @@ class Config
     */
     private $dbname = 'test';
 
-	/**
-	* Constructor
-	*
- 	* @param $log mixed - Log object
- 	* @param $config mixed - configuration options array
-	*/
+    /**
+    * Constructor
+    *
+    * @param $log mixed - Log object
+    * @param $config mixed - configuration options array
+    */
     public function __construct(Log $log, $config)
     {
         $log->track();
